@@ -25,7 +25,8 @@ SECRET_KEY = 'csc39$dmh*jpfz)iwcm9e)&i8&&^nam3kt$gm!y37ddt4-%5)2'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ["date29.herokuapp.com"]
+ALLOWED_HOSTS = ["date29.herokuapp.com",
+                 "127.0.0.1"]
 
 
 # Application definition
@@ -105,9 +106,9 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/2.0/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'ru-ru'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Europe/Moscow'
 
 USE_I18N = True
 
