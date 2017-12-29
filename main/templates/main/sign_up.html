@@ -6,6 +6,11 @@
 </head>
 <body>
     <h1>Reg</h1>
-    
+    <form method="post">
+        {% csrf_token %}
+        {{ user_form.as_p }}
+        {{ shop_form.as_p }}
+        <button type="submit">reg</button>
+    </form>
 </body>
 </html>
