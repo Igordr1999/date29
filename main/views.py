@@ -1,5 +1,6 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.http import HttpResponse
+from django.contrib.auth.decorators import login_required
 
 
 def index(request):
@@ -7,4 +8,12 @@ def index(request):
 
 
 def home(request):
+    return redirect(main_home)
+
+
+@login_required(login_url='/main/sign-in/')
+def main_home(request):
     return render(request, 'main/home.html', {})
+
+def main_sign_up(request):
+    return render(request, 'main/sign_up.html', {})

@@ -18,8 +18,14 @@ from django.urls import path
 from django.conf.urls import include, url
 from main.views import index
 from main import views
+from django.contrib.auth import views as auth_views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    url(r'^$', views.home, name='home')
+    url(r'^$', views.home, name='home'),
+    url(r'^main/sign-in/$', auth_views.login, {'template_name': 'main/sign_in.html'}, name="main-sign-in"),
+    url(r'^main/sign-out/$', auth_views.logout, {'next_page': '/'}, name="main-sign-out"),
+    url(r'^main/$', views.main_home, name='main_home'),
+    url(r'^main/sign-up/$', views.main_sign_up, name='main_sign_up')
+
 ]
