@@ -19,6 +19,8 @@ from django.conf.urls import include, url
 from main.views import index
 from main import views
 from django.contrib.auth import views as auth_views
+from django.conf.urls.static import static
+from django.conf import settings
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -28,4 +30,4 @@ urlpatterns = [
     url(r'^main/$', views.main_home, name='main_home'),
     url(r'^main/sign-up/$', views.main_sign_up, name='main_sign_up')
 
-]
+] + static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)
