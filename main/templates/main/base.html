@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block page %}Основной модуль{% endblock %}
+
+{% block sidebar %}
+    Привет, {{ request.user }}
+    <hr>
+    <a href="{% url 'main_account' %}">Профиль</a>
+    <a href="{% url 'main_orders' %}">Заказы</a>
+{% endblock %}

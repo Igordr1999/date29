@@ -1,16 +1,14 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Reg</title>
-</head>
-<body>
-    <h1>Reg</h1>
+{% extends 'main/base_sign.html' %}
+
+{% block title %}Регистрация{% endblock %}
+{% block heading %}Регистрация пользователя и магазина{% endblock %}
+
+{% block content %}
+    <h3>Reg</h3>
     <form method="post" enctype="multipart/form-data">
         {% csrf_token %}
         {{ user_form.as_p }}
         {{ shop_form.as_p }}
         <button type="submit">reg</button>
     </form>
-</body>
-</html>
+{% endblock %}

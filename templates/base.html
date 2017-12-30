@@ -1,0 +1,14 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}{% endblock %}</title>
+    <link type="text/css" rel="stylesheet" href="{% static 'css/common.css' %}">
+</head>
+<body>
+    <p>{% block sidebar %}{% endblock %}</p>
+    <h1>{% block page %}{% endblock %}</h1>
+    <a href="{% url 'main-sign-out' %}">log out</a>
+</body>
+</html>

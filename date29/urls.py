@@ -28,6 +28,8 @@ urlpatterns = [
     url(r'^main/sign-in/$', auth_views.login, {'template_name': 'main/sign_in.html'}, name="main-sign-in"),
     url(r'^main/sign-out/$', auth_views.logout, {'next_page': '/'}, name="main-sign-out"),
     url(r'^main/$', views.main_home, name='main_home'),
-    url(r'^main/sign-up/$', views.main_sign_up, name='main_sign_up')
+    url(r'^main/sign-up/$', views.main_sign_up, name='main_sign_up'),
+    url(r'^main/account/$', views.main_account, name='main_account'),
+    url(r'^main/orders/$', views.main_orders, name='main_orders'),
 
-] + static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

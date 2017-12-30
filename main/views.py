@@ -21,6 +21,16 @@ def main_home(request):
     return render(request, 'main/home.html', {})
 
 
+@login_required(login_url='/main/sign-in/')
+def main_account(request):
+    return render(request, 'main/account.html', {})
+
+
+@login_required(login_url='/main/sign-in/')
+def main_orders(request):
+    return render(request, 'main/orders.html', {})
+
+
 def main_sign_up(request):
     user_form = UserForm()
     shop_form = ShopForm()
